@@ -1,7 +1,7 @@
 rules:
 - destination: client-go
   branches:
-  - name: new-main
+  - name: main
     source:
       branch: main
       dirs:
