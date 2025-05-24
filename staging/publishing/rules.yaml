@@ -1,7 +1,7 @@
 rules:
 - destination: client-go
   branches:
-  - name: main
+  - name: new-main
     source:
       branch: main
       dirs:
@@ -10,3 +10,4 @@ rules:
 recursive-delete-patterns:
 - '*/.gitattributes'
 default-go-version: 1.24.2
+skip-tags: true
