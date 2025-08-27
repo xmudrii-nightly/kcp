@@ -6,6 +6,10 @@ rules:
       branch: main
       dirs:
       - staging/src/github.com/kcp-dev/client-go
+    smoke-test: |
+      # assumes GO111MODULE=on
+      go build -mod=mod ./...
+      go test -mod=mod ./...
   library: true
 recursive-delete-patterns:
 - '*/.gitattributes'
