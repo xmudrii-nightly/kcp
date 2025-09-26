@@ -6,7 +6,7 @@ rules:
       branch: main
       dirs:
       - staging/src/github.com/kcp-dev/apimachinery
-  tag-base: v2
+  destination-tag-base: v2
   library: true
 - destination: client-go
   branches:
@@ -15,7 +15,7 @@ rules:
       branch: main
       dirs:
       - staging/src/github.com/kcp-dev/client-go
-  tag-base: v0
+  destination-tag-base: v0
   library: true
 - destination: code-generator
   branches:
@@ -24,9 +24,10 @@ rules:
       branch: main
       dirs:
       - staging/src/github.com/kcp-dev/code-generator
-  tag-base: v3
+  destination-tag-base: v3
   library: true
 recursive-delete-patterns:
 - '*/.gitattributes'
 default-go-version: 1.24.5
 skip-tags: false
+skip-non-semver-tags: true
