@@ -9,11 +9,19 @@ rules:
   library: true
 - destination: client-go
   branches:
-  - name: new-kcp-1.33.3
+  - name: kcp-1.33.3
     source:
       branch: main
       dirs:
       - staging/src/github.com/kcp-dev/client-go
+  library: true
+- destination: code-generator
+  branches:
+  - name: new-kcp-1.33.3
+    source:
+      branch: main
+      dirs:
+      - staging/src/github.com/kcp-dev/code-generator
   library: true
 recursive-delete-patterns:
 - '*/.gitattributes'
